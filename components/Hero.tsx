@@ -71,7 +71,7 @@ export default function Hero() {
               alt="Foto Profil Romeo"
               width={720}
               height={662}
-              className="w-full max-w-[150px] lg:max-w-[720px] rounded-[28px] border-[3px] border-black shadow-[10px_10px_0px_#111] object-cover"
+              className="w-full max-w-[300px] lg:max-w-[720px] rounded-[28px] border-[3px] border-black shadow-[10px_10px_0px_#111] object-cover"
             />
           </div>
         </div>
