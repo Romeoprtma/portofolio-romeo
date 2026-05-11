@@ -43,8 +43,8 @@ export default function Navbar() {
             <Link
               href="#home"
               className="text-xl font-black text-black hover:-translate-y-0.5 transition-transform">
-              Meow
-              <span className="text-[#F48F68]">Code</span>
+              Romeo
+              <span className="text-[#F48F68]">muliap</span>
             </Link>
 
             {/* MENU DESKTOP */}

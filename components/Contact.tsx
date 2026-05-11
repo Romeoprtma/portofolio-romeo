@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { toast } from "sonner"; // Import sonner untuk notifikasi cantik
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,17 +28,35 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        alert(
-          "Pesan berhasil dikirim! Saya akan segera menghubungi Anda.",
-        );
-        (e.target as HTMLFormElement).reset(); // Reset form setelah sukses
+        // Notifikasi Sukses dengan gaya Neo-Brutalism
+        toast.success("Pesan Terkirim!", {
+          description:
+            "Terima kasih, saya akan segera menghubungi Anda melalui email.",
+          style: {
+            border: "3px solid black",
+            borderRadius: "16px",
+            background: "#8BDFDD",
+            color: "black",
+            fontWeight: "bold",
+          },
+        });
+        (e.target as HTMLFormElement).reset();
       } else {
         throw new Error();
       }
     } catch (err) {
-      alert(
-        "Gagal mengirim pesan. Silakan coba lagi nanti.",
-      );
+      // Notifikasi Gagal
+      toast.error("Gagal Mengirim", {
+        description:
+          "Terjadi kesalahan teknis. Silakan coba lagi nanti.",
+        style: {
+          border: "3px solid black",
+          borderRadius: "16px",
+          background: "#F48F68",
+          color: "black",
+          fontWeight: "bold",
+        },
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -232,9 +251,13 @@ export default function Contact() {
                   type="submit"
                   disabled={isSubmitting}
                   suppressHydrationWarning
-                  className={`w-full px-6 py-4 rounded-2xl border-[2px] border-black bg-[#FFE394] text-black text-sm font-black shadow-[4px_4px_0px_#111] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#111] transition duration-200 uppercase tracking-widest ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}>
+                  className={`w-full px-6 py-4 rounded-2xl border-[2px] border-black bg-[#FFE394] text-black text-sm font-black shadow-[4px_4px_0px_#111] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#111] transition duration-200 uppercase tracking-widest ${
+                    isSubmitting
+                      ? "opacity-50 cursor-not-allowed"
+                      : ""
+                  }`}>
                   {isSubmitting
-                    ? "Sending Message..."
+                    ? "Sending..."
                     : "Send Message"}
                 </button>
               </form>
