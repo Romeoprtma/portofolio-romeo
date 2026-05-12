@@ -32,6 +32,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
           rel="stylesheet"
         />
+        <meta
+          name="google-site-verification"
+          content="13-KDoSFmJMAhe0mLWPxZ6ifqRC6Z2qx-y1dosVjL1U"
+        />
       </head>
       <body className="font-['Space_Grotesk'] antialiased bg-[#FFF6DE]">
         <Navbar />
