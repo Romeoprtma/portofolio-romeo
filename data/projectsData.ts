@@ -112,31 +112,41 @@ export const projectsData = [
     link: "https://inhandsagency.com/",
     cardColor: "bg-[#D2E0FB]",
   },
+  {
+    id: 12,
+    category: "web",
+    tag: "Company Profile",
+    title: "Meowcode",
+    desc: "Website untuk jasa pembuatan website dan pembuatan chatbot AI.",
+    img: "/img/mockup_project/meowcode.webp",
+    link: "https://meowcode.id/",
+    cardColor: "bg-[#D2E0FB]",
+  },
   // =========================================================
   // AI INTEGRATION
   // =========================================================
   {
-    id: 12,
+    id: 13,
     category: "ai",
     tag: "AI Automation",
     title: "Cardi Maps Agent Sales",
     desc: "Ekstensi otomatisasi prospek sales berbasis data peta.",
     img: "/img/mockup_project/cardi-leads.webp",
-    link: "#", 
-    cardColor: "bg-[#C3ACD0]", 
+    link: "#",
+    cardColor: "bg-[#C3ACD0]",
   },
   {
-    id: 13,
+    id: 14,
     category: "ai",
     tag: "Computer Vision",
     title: "SMP 206 Jakarta",
     desc: "Sistem ujian online dengan autentikasi wajah (Face Recognition).",
     img: "/img/mockup_project/smp-206.webp",
     link: "#",
-    cardColor: "bg-[#A7D397]", 
+    cardColor: "bg-[#A7D397]",
   },
   {
-    id: 14,
+    id: 15,
     category: "ai",
     tag: "Deep Learning",
     title: "AgriScan",
@@ -145,5 +155,5 @@ export const projectsData = [
     link: "#",
     cardColor: "bg-[#FFE394]",
   },
-  
+
 ];

@@ -8,9 +8,9 @@ export async function POST(request: Request) {
     const { fullName, email, message } = await request.json();
 
     const data = await resend.emails.send({
-      // Jika domain belum diverifikasi di Resend, gunakan 'onboarding@resend.dev'
+
       from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: ['romeomuliap@gmail.com'], // Ganti ke email tujuan Anda
+      to: ['romeomuliap@gmail.com'],
       subject: `New Message from ${fullName} (Portfolio)`,
       replyTo: email,
       html: `
